@@ -1,11 +1,16 @@
 body {
     background: linear-gradient(45deg, #FFD700, #FFC200, #FFB700, #FFA600, #FFD700);
+    margin: 0; /* Remove default body margin */
+    padding: 20px; /* Add padding for smaller screens */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 800px; /* Limit content width for larger screens */
+    margin: auto; /* Center content */
 }
 
 #reunion, #venmo {
@@ -26,13 +31,15 @@ body {
 }
 
 #reunion {
-    width: 30vw;
-    height: 90vh;
+    width: 90vw; /* Responsive width */
+    max-width: 600px; /* Max width for larger screens */
+    height: auto; /* Maintain aspect ratio */
 }
 
 #venmo {
-    width: 30vw;
-    height: 70vh;
+    width: 90vw; /* Responsive width */
+    max-width: 600px; /* Max width for larger screens */
+    height: auto; /* Maintain aspect ratio */
 }
 
 /* Style for H1 */
@@ -47,6 +54,7 @@ h1 {
     line-height: 1.2;                       /* Slightly tighter line spacing */
 }
 
+/* Style for links */
 a {
     font-size: 2.5rem;                     /* Even larger font size */
     font-weight: 700;                      /* Bold for impact */
@@ -67,4 +75,36 @@ a {
 a:hover {
     transform: scale(1.15);               /* Larger zoom on hover */
     box-shadow: 8px 8px 18px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Adjust padding on smaller screens */
+    }
+
+    h1 {
+        font-size: 3rem; /* Smaller font for headers */
+    }
+
+    a {
+        font-size: 2rem; /* Smaller font for links */
+        padding: 15px 30px; /* Adjust padding */
+    }
+
+    #reunion, #venmo {
+        width: 90vw; /* Full width for smaller screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem; /* Further reduce font size on very small screens */
+    }
+
+    a {
+        font-size: 1.8rem; /* Smaller link font for very small screens */
+        padding: 10px 20px; /* Adjust padding for small screens */
+    }
 }
