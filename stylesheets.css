@@ -1,0 +1,62 @@
+body {
+    background: linear-gradient(45deg, #FFD700, #FFC200, #FFB700, #FFA600, #FFD700);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#reunion, #venmo {
+    width: 30%;
+    height: 30%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3), 
+                -5px -5px 10px rgba(255, 255, 255, 0.5); /* 3D beveled effect */
+    transform: perspective(1000px) rotateX(5deg) rotateY(5deg); /* Slight 3D tilt */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Optional hover effect to make it feel more interactive */
+#reunion:hover, #venmo:hover {
+    transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1.05); /* Slight zoom */
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.4), 
+                -8px -8px 15px rgba(255, 255, 255, 0.6); /* Enhanced shadow on hover */
+}
+
+/* Style for H1 */
+h1 {
+    font-family: 'Dancing Script', cursive; /* Fancy cursive font */
+    font-size: 4rem;                        /* Bigger font size */
+    font-weight: 700;                       /* Bold for emphasis */
+    color: #333333;                         /* Professional dark color */
+    text-align: center;                     /* Center the heading */
+    margin-bottom: 20px;                    /* Space below the header */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Soft shadow for elegance */
+    line-height: 1.2;                       /* Slightly tighter line spacing */
+}
+
+a {
+    font-size: 2.5rem;                     /* Even larger font size */
+    font-weight: 700;                      /* Bold for impact */
+    color: #B22222;                        /* Red text color */
+    text-decoration: none;                 /* Remove underline */
+    padding: 20px 40px;                    /* Larger padding for a substantial button feel */
+    border-radius: 15px;                   /* Rounded edges */
+    background: linear-gradient(45deg, #FFD700, #FFC200, #FFB700, #FFA600, #FFD700); /* Matching gold gradient */
+    background-size: 200% 200%;
+    animation: goldShine 3s linear infinite; /* Shimmer effect */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4); /* Deeper shadow for depth */
+    display: inline-block;                 /* Ensures proper padding and border */
+    transition: all 0.3s ease;             /* Smooth transition for hover */
+    text-align: center;
+}
+
+/* Hover effect */
+a:hover {
+    transform: scale(1.15);               /* Larger zoom on hover */
+    box-shadow: 8px 8px 18px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
